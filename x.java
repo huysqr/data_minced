@@ -1,0 +1,3 @@
+class x {
+  String ero;
+}
