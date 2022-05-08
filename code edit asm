@@ -2,7 +2,7 @@
 ; 8086 Assembly, emu8086
 
 data segment
-    ; add your data here!         ; khai bao data
+    ; add your data here!         ; khai bao data - khai báo biến
     seed dw 2332h
     rndnum dw 0  
     
@@ -17,10 +17,10 @@ data segment
     word_5 db "FRIEND$"
     
     word_pointer dw dup 5 (?)
-ends
+ends				; 
 
 stack segment
-    dw   128  dup(0)
+    dw   128  dup(0)		;khai bao stack
 ends
 
 code segment
@@ -30,7 +30,7 @@ start:
     mov     ds, ax
     mov     es, ax
 
-main_loop:               
+main_loop:               ;ham main ( ham chinh )
     call    set_word_pointer
     call    print_board
     
